@@ -1,5 +1,6 @@
 import { useState } from "react";
 import myPokemons from "../data/myPokemons";
+import { Link } from "react-router-dom";
 
 import {
   Table,
@@ -10,7 +11,6 @@ import {
   Th,
   Td,
   Container,
-  Link,
 } from "@chakra-ui/react";
 var fs = require("browserify-fs");
 
@@ -29,8 +29,16 @@ const UserPokemon = () => {
             <Tr>
               <Td>{pokemon.toUpperCase()}</Td>
               <Td>
-                <Link href={`/PokemonDetails/${pokemon}`}>
+                {/* <Link href={`/PokemonDetails/${pokemon}`}>
                   {pokemon.toUpperCase()} Details
+                </Link> */}
+                <Link
+                  to={`/PokemonDetails/${pokemon}`}
+                  style={{
+                    color: "black",
+                  }}
+                >
+                  {pokemon.toUpperCase()}
                 </Link>
               </Td>
             </Tr>

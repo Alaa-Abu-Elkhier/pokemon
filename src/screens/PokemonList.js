@@ -6,7 +6,6 @@ import {
   Container,
   Center,
   Input,
-  Divider,
   Table,
   Thead,
   Tbody,
@@ -14,7 +13,6 @@ import {
   Tr,
   Th,
   Td,
-  TableCaption,
 } from "@chakra-ui/react";
 
 const PokemonList = ({ pokemons }) => {
